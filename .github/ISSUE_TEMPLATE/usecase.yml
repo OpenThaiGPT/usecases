@@ -1,0 +1,81 @@
+name: Submit a use case / ส่งเคสการใช้งาน
+description: Tell us how your organisation or project uses an OpenThai / OpenThaiGPT model, to be listed at openthai.ai/usecases
+title: "[Use case] "
+labels: ["use-case"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing how you use OpenThai. Accepted submissions are listed at https://openthai.ai/usecases with a link back to you.
+        ขอบคุณที่ร่วมแบ่งปัน — เคสที่ผ่านการตรวจสอบจะแสดงบนหน้า https://openthai.ai/usecases พร้อมลิงก์กลับไปยังคุณ
+  - type: input
+    id: org
+    attributes:
+      label: Organisation / องค์กร
+      placeholder: e.g. Central Investigation Bureau (CIB)
+    validations:
+      required: true
+  - type: input
+    id: product
+    attributes:
+      label: Product or project name / ชื่อผลิตภัณฑ์หรือโครงการ
+      placeholder: e.g. CIBbot
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Public URL / ลิงก์
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category / ประเภท
+      options:
+        - Government / ภาครัฐ
+        - Enterprise / องค์กรเอกชน
+        - Startup / product / สตาร์ทอัพ
+        - University / research / มหาวิทยาลัยและงานวิจัย
+        - Open-source project / โอเพนซอร์ส
+        - Derivative model (fine-tune, merge, quantisation) / โมเดลต่อยอด
+        - Community / individual / ชุมชนและบุคคล
+    validations:
+      required: true
+  - type: dropdown
+    id: models
+    attributes:
+      label: OpenThai model(s) used / โมเดลที่ใช้
+      multiple: true
+      options:
+        - OpenThai 2.0 (27B)
+        - OpenThai 2.0 Legal (30B-A3B)
+        - Chinda (chinda-qwen3-4b)
+        - OpenThaiGPT 1.6 (72B)
+        - OpenThaiGPT R1 (32B)
+        - OpenThaiGPT 1.5 (7B / 14B / 72B)
+        - OpenThaiGPT 1.0 (7B / 13B / 70B)
+        - OpenThaiGPT 1.0.0-beta or earlier
+        - OpenThaiRAG
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: How do you use it? / ใช้งานอย่างไร
+      description: 2–4 sentences. What does the system do, who uses it, and what role does the OpenThai model play (chat, RAG, classification, fine-tuned base, …)?
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact (optional, not published) / ช่องทางติดต่อ (ไม่เผยแพร่)
+      placeholder: email or LINE
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Permission / การยินยอม
+      options:
+        - label: I am entitled to describe this deployment publicly and agree to it being listed on openthai.ai / ข้าพเจ้ามีสิทธิ์เปิดเผยข้อมูลนี้และยินยอมให้แสดงบน openthai.ai
+          required: true
