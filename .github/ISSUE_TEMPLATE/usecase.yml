@@ -51,6 +51,10 @@ body:
       options:
         - OpenThai 2.0 (27B)
         - OpenThai 2.0 Legal (30B-A3B)
+        - OpenThai 2.0 OCR Markdown
+        - OpenThai 2.0 OCR Text
+        - OpenThai 2.0 ASR Streaming
+        - OpenThai-SystemOne
         - Chinda (chinda-qwen3-4b)
         - OpenThaiGPT 1.6 (72B)
         - OpenThaiGPT R1 (32B)

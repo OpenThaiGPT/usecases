@@ -1,0 +1,102 @@
+name: Share an app built on OpenThai OCR / ASR · แชร์แอปที่ใช้ OpenThai OCR / ASR
+description: List your app at openthai.ai/powered-by, tell us what works and what to fix, and get the Powered by OpenThai badge
+title: "[Powered by] "
+labels: ["use-case", "powered-by"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing. Accepted apps are listed at https://openthai.ai/powered-by with a link back to you, and the badge kit is on the same page.
+        **Issues here are public.** Feedback you do not want public: send it by email from the form on https://openthai.ai/powered-by instead.
+        ขอบคุณที่ร่วมแบ่งปัน แอปที่ผ่านการตรวจสอบจะขึ้นบน https://openthai.ai/powered-by พร้อมลิงก์กลับ **issue ในหน้านี้เป็นสาธารณะ** ถ้าไม่อยากเปิดเผย ส่งทางอีเมลจากฟอร์มบนหน้าเว็บแทน
+  - type: input
+    id: product
+    attributes:
+      label: App or product name / ชื่อแอปหรือผลิตภัณฑ์
+    validations:
+      required: true
+  - type: input
+    id: org
+    attributes:
+      label: Company or organisation / บริษัทหรือองค์กร
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Public URL / ลิงก์สาธารณะ
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category / ประเภท
+      options:
+        - Government / ภาครัฐ
+        - Enterprise / องค์กรเอกชน
+        - Startup / product / สตาร์ทอัพ
+        - University / research / มหาวิทยาลัยและงานวิจัย
+        - Open-source project / โอเพนซอร์ส
+        - Derivative model (fine-tune, merge, quantisation) / โมเดลต่อยอด
+        - Community / individual / ชุมชนและบุคคล
+    validations:
+      required: true
+  - type: dropdown
+    id: models
+    attributes:
+      label: Model(s) used / โมเดลที่ใช้
+      multiple: true
+      options:
+        - OpenThai 2.0 OCR Markdown
+        - OpenThai 2.0 OCR Text
+        - OpenThai 2.0 OCR API (iApp)
+        - OpenThai 2.0 ASR Streaming
+        - OpenThai ASR Realtime API (iApp)
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What do you use it for? / ใช้ทำอะไร
+      description: 2–3 sentences. What the app does, who uses it, what kind of documents or audio.
+    validations:
+      required: true
+  - type: textarea
+    id: works
+    attributes:
+      label: What works well? (optional) / อะไรที่ใช้ได้ดี
+  - type: textarea
+    id: fix
+    attributes:
+      label: What should we fix? (optional) / อะไรที่อยากให้ปรับ
+      description: Which documents or audio it gets wrong. Do not attach anything with personal data here; email samples instead.
+  - type: textarea
+    id: quote
+    attributes:
+      label: A short quote we may publish (optional) / คำพูดสั้น ๆ ที่ยินดีให้เผยแพร่
+  - type: input
+    id: quote_by
+    attributes:
+      label: Name and role of the person quoted (optional) / ชื่อและตำแหน่งผู้พูด
+  - type: dropdown
+    id: badge
+    attributes:
+      label: Does your app tell its users it runs OpenThai? / แอปของคุณบอกผู้ใช้หรือยังว่าใช้ OpenThai
+      options:
+        - Yes, already / บอกแล้ว
+        - Adding the badge soon / จะติดป้ายเร็ว ๆ นี้
+        - Not yet / ยังไม่ได้
+  - type: input
+    id: contact
+    attributes:
+      label: Contact (optional, not published) / ช่องทางติดต่อ (ไม่เผยแพร่)
+      placeholder: email or LINE
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Permission / การยินยอม
+      options:
+        - label: I am entitled to describe this app publicly and agree to it being listed on openthai.ai / ข้าพเจ้ามีสิทธิ์เปิดเผยข้อมูลนี้และยินยอมให้แสดงบน openthai.ai
+          required: true
+        - label: You may publish the quote above with the name given / อนุญาตให้เผยแพร่คำพูดข้างต้นพร้อมชื่อที่ให้ไว้
