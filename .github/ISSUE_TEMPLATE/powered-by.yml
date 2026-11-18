@@ -48,9 +48,9 @@ body:
       label: Model(s) used / โมเดลที่ใช้
       multiple: true
       options:
-        - OpenThai 2.0 OCR Markdown
-        - OpenThai 2.0 OCR Text
-        - OpenThai 2.0 OCR API (iApp)
+        - OpenThai 2.1 OCR Markdown
+        - OpenThai 2.1 OCR Text
+        - OpenThai OCR API (iApp)
         - OpenThai 2.0 ASR Streaming
         - OpenThai ASR Realtime API (iApp)
     validations:
